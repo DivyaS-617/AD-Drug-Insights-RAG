@@ -16,7 +16,7 @@ st.title("🛡️ Abu Dhabi Official Drug RAG")
 st.write("Using data from DOH Shafafiya Dictionary")
 
 # 2. Load the Official Master List
-df = pd.read_excel("shafafiya_master.xlsx", engine="openpyxl")
+df = pd.read_excel("drug_master.xlsx", engine="openpyxl")
 
 # 3. Create the RAG Agent (The AI that reads your Excel)
 agent = create_pandas_dataframe_agent(llm, df, verbose=True, allow_dangerous_code=True)
