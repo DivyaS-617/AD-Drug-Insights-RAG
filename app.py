@@ -39,12 +39,13 @@ user_question = st.text_input("Ask a question about the drugs (e.g., 'What is th
 if user_question:
     with st.spinner("Searching the Drug Master..."):
         try:
-            response = agent.run(user_question)
+            # Pushed 4 spaces to the right of 'try'
+            response = agent.invoke({"input": user_question})["output"]
             st.write("### AI Response:")
             st.info(response)
         except Exception as e:
+            # Aligned exactly under 'try'
             st.error(f"An error occurred: {e}")
-
 # 6. Data Preview (Optional checkbox)
 if st.checkbox("Show Data Preview (Top 10 rows)"):
     st.dataframe(df.head(10))
