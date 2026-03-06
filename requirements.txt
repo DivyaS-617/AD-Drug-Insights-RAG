@@ -1,6 +1,7 @@
 streamlit
 pandas
 openpyxl
+tabulate
 langchain-experimental
 langchain-google-genai
 python-dotenv
